@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Convite para Mayara 💙🩷</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --azul: #68c8f2;
+            --azul-escuro: #247ba0;
+            --rosa: #f66ca7;
+            --rosa-escuro: #b84475;
+            --rosa-claro: #ffe5f0;
+            --branco: #ffffff;
+            --texto: #704d63;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+
+            font-family:
+                "Comic Sans MS",
+                "Trebuchet MS",
+                cursive;
+
+            background:
+                linear-gradient(
+                    rgba(255, 229, 240, 0.72),
+                    rgba(104, 200, 242, 0.55)
+                ),
+                url("stitch3.png.png");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+        }
+
+        .camada {
+            position: fixed;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(255, 255, 255, 0.45),
+                    rgba(255, 229, 240, 0.15)
+                );
+
+            backdrop-filter: blur(4px);
+            z-index: -2;
+        }
+
+        .decoracao {
+            position: fixed;
+            width: clamp(70px, 10vw, 125px);
+            pointer-events: none;
+            z-index: 0;
+
+            filter:
+                drop-shadow(
+                    0 10px 12px rgba(0, 0, 0, 0.14)
+                );
+
+            animation:
+                flutuar 4s ease-in-out infinite;
+        }
+
+        .decoracao.esquerda {
+            top: 5%;
+            left: 2%;
+        }
+
+        .decoracao.direita {
+            bottom: 5%;
+            right: 2%;
+            animation-delay: 1.4s;
+        }
+
+        @keyframes flutuar {
+            0%, 100% {
+                transform:
+                    translateY(0)
+                    rotate(-3deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-16px)
+                    rotate(3deg);
+            }
+        }
+
+        .coracao {
+            position: fixed;
+            bottom: -40px;
+
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.72;
+
+            animation:
+                subir linear forwards;
+        }
+
+        @keyframes subir {
+            from {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            12% {
+                opacity: 0.8;
+            }
+
+            to {
+                transform:
+                    translateY(-115vh)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+        .container {
+            width: min(94vw, 650px);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cartao {
+            width: 100%;
+
+            background:
+                rgba(255, 255, 255, 0.91);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.95);
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 26px 75px
+                rgba(73, 112, 140, 0.28);
+
+            backdrop-filter: blur(18px);
+
+            padding:
+                clamp(24px, 5vw, 44px);
+
+            text-align: center;
+
+            animation:
+                aparecer 0.5s ease;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform:
+                    translateY(22px)
+                    scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+        .tela {
+            display: none;
+        }
+
+        .tela.ativa {
+            display: block;
+            animation:
+                aparecer 0.45s ease;
+        }
+
+        .imagem-topo {
+            width: 120px;
+            height: 120px;
+
+            object-fit: contain;
+            margin-bottom: 10px;
+
+            border-radius: 22px;
+
+            filter:
+                drop-shadow(
+                    0 8px 12px
+                    rgba(36, 123, 160, 0.18)
+                );
+        }
+
+        h1 {
+            color: var(--rosa-escuro);
+
+            font-size:
+                clamp(26px, 5vw, 39px);
+
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            color: var(--rosa-escuro);
+
+            font-size:
+                clamp(23px, 4vw, 33px);
+
+            margin-bottom: 14px;
+        }
+
+        p {
+            color: var(--texto);
+
+            font-size:
+                clamp(16px, 2.7vw, 20px);
+
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .destaque {
+            color: var(--rosa);
+            font-weight: bold;
+        }
+
+        button {
+            border: none;
+            border-radius: 18px;
+
+            padding: 14px 27px;
+
+            font-family: inherit;
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.18s ease,
+                box-shadow 0.18s ease,
+                background 0.18s ease;
+        }
+
+        button:hover {
+            transform:
+                translateY(-3px);
+        }
+
+        .botao-rosa {
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--rosa),
+                    #ff9bc4
+                );
+
+            box-shadow:
+                0 10px 24px
+                rgba(246, 108, 167, 0.30);
+        }
+
+        .botao-azul {
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--azul-escuro),
+                    var(--azul)
+                );
+
+            box-shadow:
+                0 10px 24px
+                rgba(36, 123, 160, 0.28);
+        }
+
+        .botao-claro {
+            color: var(--rosa-escuro);
+            background: var(--rosa-claro);
+
+            box-shadow:
+                0 8px 18px
+                rgba(184, 68, 117, 0.15);
+        }
+
+        .botoes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .area-pergunta {
+            min-height: 165px;
+            position: relative;
+            margin-top: 18px;
+        }
+
+        #botaoSim {
+            position: absolute;
+            right: calc(50% + 14px);
+            top: 62px;
+        }
+
+        #botaoNao {
+            position: absolute;
+            left: calc(50% + 14px);
+            top: 62px;
+        }
+
+        label {
+            display: block;
+
+            color: var(--rosa-escuro);
+
+            font-size: 17px;
+            font-weight: bold;
+
+            text-align: left;
+            margin: 17px 0 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+
+            border:
+                2px solid var(--rosa-claro);
+
+            border-radius: 15px;
+
+            padding: 14px;
+
+            font-family: inherit;
+            font-size: 16px;
+            color: var(--texto);
+
+            background: white;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: var(--rosa);
+
+            box-shadow:
+                0 0 0 4px
+                rgba(246, 108, 167, 0.12);
+        }
+
+        .grade-comidas {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(130px, 1fr)
+                );
+
+            gap: 13px;
+            margin-top: 20px;
+        }
+
+        .comida {
+            color: var(--texto);
+            background:
+                rgba(255, 229, 240, 0.72);
+
+            border:
+                2px solid transparent;
+
+            border-radius: 20px;
+
+            padding: 20px 10px;
+            cursor: pointer;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            transition: 0.2s ease;
+        }
+
+        .comida span {
+            display: block;
+            font-size: 39px;
+            margin-bottom: 8px;
+        }
+
+        .comida:hover,
+        .comida.selecionada {
+            color: white;
+            background: var(--rosa);
+            border-color: white;
+
+            transform: scale(1.04);
+        }
+
+        .resumo {
+            margin-top: 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #fffafd,
+                    var(--rosa-claro)
+                );
+
+            border:
+                3px dashed var(--rosa);
+
+            border-radius: 23px;
+            padding: 24px;
+        }
+
+        .resumo p {
+            color: var(--azul-escuro);
+            font-weight: bold;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .observacao {
+            margin-top: 20px;
+
+            color: #a16d8c;
+            font-size: 13px;
+        }
+
+        @media (max-width: 560px) {
+            body {
+                padding: 12px;
+            }
+
+            .cartao {
+                padding: 24px 16px;
+                border-radius: 23px;
+            }
+
+            .decoracao {
+                opacity: 0.5;
+            }
+
+            #botaoSim {
+                right: calc(50% + 5px);
+            }
+
+            #botaoNao {
+                left: calc(50% + 5px);
+            }
+
+            .grade-comidas {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="camada"></div>
+
+    <img
+        class="decoracao esquerda"
+        src="stitch1.png.png"
+        alt=""
+    >
+
+    <img
+        class="decoracao direita"
+        src="stitch2.png.png"
+        alt=""
+    >
+
+    <main class="container">
+
+        <section class="cartao">
+
+
+            <!-- TELA 1: CARTINHA -->
+
+            <div
+                id="telaIntroducao"
+                class="tela ativa"
+            >
+
+                <img
+                    class="imagem-topo"
+                    src="stitch3.png.png"
+                    alt="Stitch e Angel"
+                >
+
+                <h1>Oi, meu babe ♡</h1>
+
+                <p>
+                    Sei que é o seu aniversário
+                    e queria te dar uma lembrança
+                    do meu amor...
+                </p>
+
+                <p>
+                    Mas a verdade é que quem vai
+                    ganhar o presente sou eu,
+                    <span class="destaque">
+                        se você aceitar este convite.
+                    </span>
+                </p>
+
+                <p>Preparada? 🩷</p>
+
+                <button
+                    class="botao-rosa"
+                    onclick="mostrarTela('telaConvite')"
+                >
+                    Continuar 💙
+                </button>
+
+            </div>
+
+
+            <!-- TELA 2: SIM OU NÃO -->
+
+            <div
+                id="telaConvite"
+                class="tela"
+            >
+
+                <img
+                    class="imagem-topo"
+                    src="stitch3.png.png"
+                    alt=""
+                >
+
+                <h1>
+                    Mayara, você aceita
+                    sair comigo? 🌸
+                </h1>
+
+                <p>
+                    Fiz tudo isso porque queria
+                    te convidar de um jeito
+                    especial e com a nossa cara. 🩷
+                </p>
+
+                <div class="area-pergunta">
+
+                    <button
+                        id="botaoSim"
+                        class="botao-rosa"
+                        onclick="aceitouConvite()"
+                    >
+                        SIM ♡
+                    </button>
+
+                    <button
+                        id="botaoNao"
+                        class="botao-azul"
+                        onmouseenter="fugir()"
+                        onclick="fugir()"
+                    >
+                        NÃO 😭
+                    </button>
+
+                </div>
+
+                <p class="observacao">
+                    Não sei por que esse botão
+                    “não” está com defeito KKKKK.
+                </p>
+
+            </div>
+
+
+            <!-- TELA 3: DATA E HORÁRIO -->
+
+            <div
+                id="telaDataHorario"
+                class="tela"
+            >
+
+                <h2>
+                    Então… quando você está livre? 📅
+                </h2>
+
+                <p>
+                    Escolha o dia e o horário
+                    que ficarem melhores para você.
+                </p>
+
+                <label for="data">
+                    Escolha a data:
+                </label>
+
+                <input
+                    id="data"
+                    type="date"
+                    min="2026-08-01"
+                    max="2026-08-31"
+                >
+
+                <label for="horario">
+                    Qual horário? ⏰
+                </label>
+
+                <select id="horario">
+
+                    <option value="">
+                        Escolha um horário...
+                    </option>
+
+                    <option>12:00</option>
+                    <option>12:30</option>
+                    <option>13:00</option>
+                    <option>13:30</option>
+                    <option>14:00</option>
+                    <option>14:30</option>
+                    <option>15:00</option>
+                    <option>15:30</option>
+                    <option>16:00</option>
+                    <option>16:30</option>
+                    <option>17:00</option>
+                    <option>17:30</option>
+                    <option>18:00</option>
+                    <option>18:30</option>
+                    <option>19:00</option>
+                    <option>19:30</option>
+                    <option>20:00</option>
+                    <option>20:30</option>
+                    <option>21:00</option>
+                    <option>21:30</option>
+                    <option>22:00</option>
+
+                </select>
+
+                <div class="botoes">
+
+                    <button
+                        class="botao-rosa"
+                        onclick="confirmarDataHorario()"
+                    >
+                        Continuar 🩷
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TELA 4: COMIDA -->
+
+            <div
+                id="telaComida"
+                class="tela"
+            >
+
+                <h2>
+                    O que estamos sentindo vontade
+                    de comer? 🍽️✨
+                </h2>
+
+                <p>
+                    Escolha a sua vibe para o encontro.
+                </p>
+
+                <div class="grade-comidas">
+
+                    <div
+                        class="comida"
+                        onclick="selecionarComida(this, 'Pizza')"
+                    >
+                        <span>🍕</span>
+                        Pizza
+                    </div>
+
+                    <div
+                        class="comida"
+                        onclick="selecionarComida(this, 'Comida japonesa')"
+                    >
+                        <span>🍣</span>
+                        Japonês
+                    </div>
+
+                    <div
+                        class="comida"
+                        onclick="selecionarComida(this, 'Hambúrguer')"
+                    >
+                        <span>🍔</span>
+                        Hambúrguer
+                    </div>
+
+                    <div
+                        class="comida"
+                        onclick="selecionarComida(this, 'Massa')"
+                    >
+                        <span>🍝</span>
+                        Massa
+                    </div>
+
+                    <div
+                        class="comida"
+                        onclick="selecionarComida(this, 'Mexicano')"
+                    >
+                        <span>🌮</span>
+                        Mexicano
+                    </div>
+
+                    <div
+                        class="comida"
+                        onclick="selecionarComida(this, 'Lámen')"
+                    >
+                        <span>🍜</span>
+                        Lámen
+                    </div>
+
+                    <div
+                        class="comida"
+                        onclick="selecionarComida(this, 'Doces e café')"
+                    >
+                        <span>🍰</span>
+                        Doces e café
+                    </div>
+
+                    <div
+                        class="comida"
+                        onclick="selecionarComida(this, 'Surpresa')"
+                    >
+                        <span>🎁</span>
+                        Surpresa
+                    </div>
+
+                </div>
+
+                <div class="botoes">
+
+                    <button
+                        id="botaoConfirmarComida"
+                        class="botao-rosa"
+                        style="display: none;"
+                        onclick="mostrarResumo()"
+                    >
+                        Confirmar encontro 💙
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TELA 5: FINAL -->
+
+            <div
+                id="telaFinal"
+                class="tela"
+            >
+
+                <img
+                    class="imagem-topo"
+                    src="stitch3.png.png"
+                    alt=""
+                >
+
+                <h1>
+                    Encontro confirmado! 😭💙🩷
+                </h1>
+
+                <div class="resumo">
+
+                    <h2>
+                        Certificado oficial
+                    </h2>
+
+                    <p>
+                        Mayara aceitou sair comigo. ♡
+                    </p>
+
+                    <p id="resumoData"></p>
+
+                    <p id="resumoHorario"></p>
+
+                    <p id="resumoComida"></p>
+
+                    <p>
+                        Agora quem ganhou
+                        o presente fui eu.
+                    </p>
+
+                </div>
+
+                <p class="observacao">
+                    Feito especialmente para você,
+                    com amor, Stitch, Angel
+                    e uns 87 erros de programação.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+        let dataEscolhida = "";
+        let horarioEscolhido = "";
+        let comidaEscolhida = "";
+
+
+        function mostrarTela(id) {
+
+            document
+                .querySelectorAll(".tela")
+                .forEach((tela) => {
+                    tela.classList.remove("ativa");
+                });
+
+            document
+                .getElementById(id)
+                .classList.add("ativa");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+
+        function fugir() {
+
+            const botao =
+                document.getElementById("botaoNao");
+
+            const area =
+                document.querySelector(".area-pergunta");
+
+            const limiteX =
+                Math.max(
+                    0,
+                    area.clientWidth -
+                    botao.offsetWidth
+                );
+
+            const limiteY =
+                Math.max(
+                    0,
+                    area.clientHeight -
+                    botao.offsetHeight
+                );
+
+            const x =
+                Math.floor(
+                    Math.random() * limiteX
+                );
+
+            const y =
+                Math.floor(
+                    Math.random() * limiteY
+                );
+
+            botao.style.left = `${x}px`;
+            botao.style.top = `${y}px`;
+
+            const mensagens = [
+                "NÃO 😭",
+                "Tem certeza? 🥺",
+                "Tenta de novo KKKK",
+                "Esse botão não funciona 😌",
+                "Vai no SIM, babe 💙",
+                "Você não vai conseguir KKKK"
+            ];
+
+            botao.textContent =
+                mensagens[
+                    Math.floor(
+                        Math.random() *
+                        mensagens.length
+                    )
+                ];
+        }
+
+
+        function aceitouConvite() {
+
+            mostrarTela(
+                "telaDataHorario"
+            );
+        }
+
+
+        function confirmarDataHorario() {
+
+            const campoData =
+                document.getElementById("data");
+
+            const campoHorario =
+                document.getElementById("horario");
+
+            if (!campoData.value) {
+
+                alert(
+                    "Escolhe uma data primeiro, babe 🥺"
+                );
+
+                campoData.focus();
+                return;
+            }
+
+            if (!campoHorario.value) {
+
+                alert(
+                    "Escolhe um horário também 🩷"
+                );
+
+                campoHorario.focus();
+                return;
+            }
+
+            const partes =
+                campoData.value.split("-");
+
+            dataEscolhida =
+                `${partes[2]}/${partes[1]}/${partes[0]}`;
+
+            horarioEscolhido =
+                campoHorario.value;
+
+            mostrarTela(
+                "telaComida"
+            );
+        }
+
+
+        function selecionarComida(
+            elemento,
+            comida
+        ) {
+
+            document
+                .querySelectorAll(".comida")
+                .forEach((opcao) => {
+
+                    opcao.classList.remove(
+                        "selecionada"
+                    );
+
+                });
+
+            elemento.classList.add(
+                "selecionada"
+            );
+
+            comidaEscolhida = comida;
+
+            document.getElementById(
+                "botaoConfirmarComida"
+            ).style.display = "inline-block";
+        }
+
+
+        function mostrarResumo() {
+
+            document.getElementById(
+                "resumoData"
+            ).textContent =
+                `📅 Data: ${dataEscolhida}`;
+
+            document.getElementById(
+                "resumoHorario"
+            ).textContent =
+                `⏰ Horário: ${horarioEscolhido}`;
+
+            document.getElementById(
+                "resumoComida"
+            ).textContent =
+                `🍽️ Comida escolhida: ${comidaEscolhida}`;
+
+            mostrarTela(
+                "telaFinal"
+            );
+        }
+
+
+        function criarCoracao() {
+
+            const coracao =
+                document.createElement("div");
+
+            coracao.className =
+                "coracao";
+
+            const simbolos = [
+                "♡",
+                "💙",
+                "🩷",
+                "🌸",
+                "✨"
+            ];
+
+            coracao.textContent =
+                simbolos[
+                    Math.floor(
+                        Math.random() *
+                        simbolos.length
+                    )
+                ];
+
+            coracao.style.left =
+                `${Math.random() * 100}vw`;
+
+            coracao.style.fontSize =
+                `${14 + Math.random() * 22}px`;
+
+            coracao.style.animationDuration =
+                `${6 + Math.random() * 7}s`;
+
+            document.body.appendChild(
+                coracao
+            );
+
+            setTimeout(() => {
+                coracao.remove();
+            }, 14000);
+        }
+
+
+        setInterval(
+            criarCoracao,
+            650
+        );
+    </script>
+
+</body>
+</html>
